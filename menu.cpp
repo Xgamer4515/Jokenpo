@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <cstdlib>
 #include "menu.h"
 #include "placar.h"
 
