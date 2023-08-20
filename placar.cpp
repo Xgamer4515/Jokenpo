@@ -10,21 +10,9 @@ void Placar(int ponto)
 
     switch (ponto)
     {
-        case Empate:
-        {
-            empates++;
-            break;
-        }
-        case Ganhar:
-        {
-            player++;
-            break;
-        }
-        case Perder:
-        {
-            CPU++;
-            break;
-        }
+        case Empate: empates++; break;
+        case Ganhar: player++; break;
+        case Perder: CPU++; break;
     }
 
     cout << "======================\n";
