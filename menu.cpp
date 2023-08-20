@@ -4,12 +4,6 @@
 #include "menu.h"
 #include "placar.h"
 
-#ifdef _WIN32
-    #define CLEAR_COMMAND "cls"
-#else
-    #define CLEAR_COMMAND "clear"
-#endif
-
 using std::cout;
 using std::cin;
 using std::endl;
@@ -65,29 +59,17 @@ void Menu()
         cout << "Voce escolheu: ";
         switch (escolha)
         {
-            case Pedra:
-                cout << "Pedra" << endl;
-                break;
-            case Papel:
-                cout << "Papel" << endl;
-                break;
-            case Tesoura:
-                cout << "Tesoura" << endl;
-                break;
+            case Pedra: cout << "Pedra" << endl; break;
+            case Papel: cout << "Papel" << endl; break;
+            case Tesoura: cout << "Tesoura" << endl; break;
         }
 
         cout << "A CPU escolheu: ";
         switch (escolhaCPU)
         {
-            case Pedra:
-                cout << "Pedra" << endl;
-                break;
-            case Papel:
-                cout << "Papel" << endl;
-                break;
-            case Tesoura:
-                cout << "Tesoura" << endl;
-                break;
+            case Pedra: cout << "Pedra" << endl; break;
+            case Papel: cout << "Papel" << endl; break;
+            case Tesoura: cout << "Tesoura" << endl; break;
         }
 
         int res = resultado[escolha - 1][escolhaCPU - 1];
@@ -103,6 +85,6 @@ void Menu()
             cin >> resp;
         }
 
-        system(CLEAR_COMMAND);
+        LimparTela();
     }
 }
